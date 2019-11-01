@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ChuckNorrisJokeApp.MainPage">
+
+    <StackLayout BackgroundColor="LightGray">
+        <!-- Place new controls here -->
+        <Label Text="Creating Apps now!! This will generate Chuck Norris Jokes. Click the Button below." 
+               HorizontalOptions="Start"
+               VerticalOptions="Start" FontSize="Large"  FontFamily="Cursive" FontAttributes="Italic" LineHeight="1" Margin="20" TextColor="black" />
+
+
+        <Label x:Name="JokeLabel" HeightRequest="200" HorizontalOptions="Start" BackgroundColor="white" 
+               VerticalOptions="Start" FontSize="Medium"  FontFamily="Cursive" FontAttributes="Bold" LineHeight="1.5" Margin="20"  TextColor="DodgerBlue" />
+        
+        <Button Text="Chuck Norris Joke" x:Name="JokeButton" Clicked="JokeButton_Clicked"   Margin="20" WidthRequest="500" 
+                FontSize="Large" FontAttributes="Bold" TextColor="white" BackgroundColor="black" BorderColor="DodgerBlue" BorderWidth="5"/>
+
+        <FlexLayout JustifyContent="Center" AlignItems="Center">
+            <Button   Text="Categories" x:Name="CategoriesButton" Clicked="CategoriesButton_Clicked"
+                      FontSize="Large" FontAttributes="Bold" TextColor="white" BackgroundColor="Black" BorderColor="DodgerBlue" BorderWidth="5"/>
+
+            <Button Text="Dad Jokes >" x:Name="GoToDadJokes" Clicked="GoToDadJokes_Clicked" Margin="20"  
+                FontSize="Large" FontAttributes="Bold" TextColor="white" BackgroundColor="DodgerBlue" BorderColor="black" BorderWidth="5"/>
+        </FlexLayout>
+
+
+    </StackLayout>
+
+</ContentPage>
+

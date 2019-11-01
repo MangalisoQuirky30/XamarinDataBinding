@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ChuckNorrisJokeApp.DadJokes">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Dad Jokes!" />
+
+            <Image Source="img0.jpg" x:Name="DadPhoto" />
+
+            <Label Text="" x:Name="DadJokeLabel"  VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Button Text="Get Dad Joke" x:Name="JokeButton" Clicked="JokeButton_Clicked"/>
+            
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+   
