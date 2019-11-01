@@ -14,11 +14,9 @@ namespace ChuckNorrisJokesLibrary
             var client = new HttpClient() ;
             string randomJoke = await client.GetStringAsync("https://api.chucknorris.io/jokes/random");
             // this return a string found in that url... its a json text in a string format
-
             var joke = JsonConvert.DeserializeObject<Joke>(randomJoke);
             // this converts  the json in string form (randomJoke) to csharp cstructure specified in 'joke.cs'-class
             // take json, turn it to csharp
-
             return joke.value;
         }
 
@@ -26,6 +24,8 @@ namespace ChuckNorrisJokesLibrary
         {
             throw new NotImplementedException();
         }
+
+
 
         public async Task<string[]> GetCategories()
         {
@@ -35,6 +35,37 @@ namespace ChuckNorrisJokesLibrary
             var categoriesStrArr = JsonConvert.DeserializeObject<string[]>(categoriesstring);
             return categoriesStrArr;
         }
+
+       
+
+
+
+       
+
+
+
+
     }
 }
 
+
+
+
+    /*[ 
+        "animal",
+        "career",
+        "celebrity",
+        "dev",
+        "explicit",
+        "fashion",
+        "food",
+        "history",
+        "money",
+        "movie",
+        "music",
+        "political",
+        "religion",
+        "science",
+        "sport",
+        "travel"
+    ] */

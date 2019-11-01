@@ -7,5 +7,15 @@
              x:Class="ChuckNorrisJokeApp.App">
     <Application.Resources>
 
+        <ResourceDictionary>
+            
+            <Style x:Key="positionsTitle"  TargetType="Label">
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextColor" Value="Gray"/>
+            </Style>
+            
+        </ResourceDictionary>
+
     </Application.Resources>
 </Application>

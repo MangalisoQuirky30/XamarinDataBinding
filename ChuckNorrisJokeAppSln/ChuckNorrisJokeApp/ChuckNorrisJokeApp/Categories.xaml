@@ -5,24 +5,27 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="ChuckNorrisJokeApp.Categories">
-    <ContentPage.Content>
+
+    <ListView ItemsSource="{Binding CategoriesList}"
+              HasUnevenRows="true"
+              ItemSelected="ListView_ItemSelected"
+              ItemTapped="ListView_ItemTapped" SelectionMode="None">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Vertical">
+                        <StackLayout Padding="5" >
+                            <Label x:Name="{Binding CategoryName}" Text="{Binding CategoryName}"  TextColor="Black" FontSize="25"  />
+                        </StackLayout>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+    
+    
+    
 
 
-        <ListView x:Name="categoryListView"
-
-                  HasUnevenRows="True" >
-
-            <ListView.ItemTemplate>
-                <DataTemplate>
-
-                    <ViewCell>
-                        <Label Text="Hello XAMAARIN" TextColor="Accent"/>
-
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-
-        </ListView>
-    </ContentPage.Content>
 </ContentPage> 
     
